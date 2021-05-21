@@ -11,10 +11,14 @@ export const styles = {
     backgroundColor: "#FFE500",
     color: "#041F4A",
     marginRight: ".5vw",
+    outline: "none",
+    boxShadow: "none",
   },
   portfolioBtn: {
     borderRadius: "25px",
     backgroundColor: "#FFE500",
     color: "#041F4A",
+    outline: "none",
+    boxShadow: "none",
   },
 };

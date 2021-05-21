@@ -10,8 +10,12 @@ const Header = () => {
         <p style={styles.navSubtitle}>
           Front end Developer open to work immediately
         </p>
-        <Button style={styles.gitBtn}>My Github</Button>
-        <Button style={styles.portfolioBtn}>My Portfolio</Button>
+        <a href="https://github.com/owlsCloud">
+          <Button style={styles.gitBtn}>My Github</Button>
+        </a>
+        <a href="https://owscloud.tech">
+          <Button style={styles.portfolioBtn}>My Portfolio</Button>
+        </a>
         <NavBar />
       </Container>
     </Container>
