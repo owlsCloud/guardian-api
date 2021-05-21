@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import ArticleCard from "./ArticleCard";
+import { Row, Col } from "react-bootstrap";
 const Feed = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -20,12 +21,15 @@ const Feed = () => {
 
   return (
     <>
-      <div>
+      <Row>
         {data.map((article, idx) => {
-          console.log(article.webTitle);
-          return <p key={idx}>{article.webTitle}</p>;
+          return (
+            <Col>
+              <ArticleCard key={idx} article={article} />
+            </Col>
+          );
         })}
-      </div>
+      </Row>
     </>
   );
 };
