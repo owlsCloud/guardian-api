@@ -2,6 +2,7 @@ export const styles = {
   headerWrap: {
     backgroundColor: "#052962",
     padding: "0",
+    width: "100vw",
   },
   navTitle: { color: "#FFE500", fontSize: "2rem" },
   navSubtitle: { color: "#FFffff" },

@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import { styles } from "./styles/headerStyles";
 const Header = () => {
   return (
-    <Container style={styles.headerWrap}>
+    <Container fluid style={styles.headerWrap}>
       <Container>
         <h4 style={styles.navTitle}>Support Gerardo Garza</h4>
         <p style={styles.navSubtitle}>
@@ -12,9 +12,8 @@ const Header = () => {
         </p>
         <Button style={styles.gitBtn}>My Github</Button>
         <Button style={styles.portfolioBtn}>My Portfolio</Button>
+        <NavBar />
       </Container>
-
-      <NavBar />
     </Container>
   );
 };
