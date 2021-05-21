@@ -7,7 +7,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Feed />
+        <Route path="/news">
+          <Feed />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

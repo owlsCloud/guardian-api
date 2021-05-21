@@ -5,27 +5,31 @@ import { Row, Col, Container } from "react-bootstrap";
 const Feed = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios
-      .get(
-        "https://content.guardianapis.com/search?api-key=8dd53406-f0a0-4418-92f2-f50af6e5ee84"
-      )
+    const fetchData = () => {
+      axios
+        .get(
+          "https://content.guardianapis.com/search?api-key=8dd53406-f0a0-4418-92f2-f50af6e5ee84"
+        )
 
-      .then((res) => {
-        res.data.response.results.forEach((article) => {
-          data.push(article);
-          setData([...data, article]);
+        .then((res) => {
+          res.data.response.results.forEach((article) => {
+            data.push(article);
+
+            setData([...data, article]);
+          });
+          console.log(data);
         });
-      });
-    console.log(data);
+    };
+    fetchData();
   }, []);
 
   return (
     <Container>
-      <Row>
+      <Row xs={5}>
         {data.map((article, idx) => {
           return (
-            <Col>
-              <ArticleCard key={idx} article={article} />
+            <Col key={idx}>
+              <ArticleCard article={article} />
             </Col>
           );
         })}

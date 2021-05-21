@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import { styles } from "./styles/navStyles";
 const NavBar = () => {
   return (
