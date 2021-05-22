@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ArticleCard from "./ArticleCard";
 import { Row, Col, Container } from "react-bootstrap";
-const Feed = () => {
+const Feed = ({ section }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = () => {
@@ -13,11 +13,18 @@ const Feed = () => {
 
         .then((res) => {
           res.data.response.results.forEach((article) => {
-            data.push(article);
+            if (section) {
+              if (article.pillarName === section) {
+                data.push(article);
 
-            setData([...data, article]);
+                setData([...data, article]);
+              }
+            } else {
+              data.push(article);
+
+              setData([...data, article]);
+            }
           });
-          console.log(data);
         });
     };
     fetchData();

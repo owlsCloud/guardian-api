@@ -1,11 +1,11 @@
 import React from "react";
 import Feed from "../components/Feed";
-const News = () => {
+const Sport = () => {
   return (
     <>
-      <Feed />
+      <Feed section="Sport" />
     </>
   );
 };
 
-export default News;
+export default Sport;
