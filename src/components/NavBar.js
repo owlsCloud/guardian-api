@@ -16,7 +16,7 @@ const NavBar = () => {
           <Nav.Link style={styles.navLinks} href="/sport">
             Sport
           </Nav.Link>
-          <Nav.Link style={styles.navLinks} href="#pricing">
+          <Nav.Link style={styles.navLinks} href="/culture">
             Culture
           </Nav.Link>
           <Nav.Link style={styles.navLinks} href="#pricing">

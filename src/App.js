@@ -3,6 +3,7 @@ import News from "./pages/News";
 import Opinion from "./pages/Opinion";
 import Sport from "./pages/Sport";
 import Header from "./components/Header";
+import Culture from "./pages/Culture";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/sport" exact>
           <Sport />
+        </Route>
+        <Route path="/culture" exact>
+          <Culture />
         </Route>
       </Switch>
     </BrowserRouter>
